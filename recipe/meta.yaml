@@ -1,5 +1,5 @@
 {% set base_name = "libignition-rendering" %}
-{% set version = "4.1.0" %}
+{% set version = "4.2.0" %}
 {% set name = base_name  + version.split('.')[0] %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/ignitionrobotics/ign-rendering/archive/ignition-rendering{{ version.split('.')[0] }}_{{ version }}.tar.gz
-  sha256: 465e858332d5b0e608888e9d62d08f779c7d99d0a51f2de7ba23ba640cdd4be4
+  sha256: aeb1f429b0128b73ac2790f8a82f6ed9fa9bbaf99af917d10da691f660eba919
 
 build:
   number: 0
