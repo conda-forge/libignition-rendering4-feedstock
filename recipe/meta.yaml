@@ -11,7 +11,7 @@ source:
   sha256: 465e858332d5b0e608888e9d62d08f779c7d99d0a51f2de7ba23ba640cdd4be4
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 

@@ -18,5 +18,5 @@ cmake --build . --config Release --target install
 if errorlevel 1 exit 1
 
 :: Test.
-ctest -C Release -E "INTEGRATION|PERFORMANCE|REGRESSION|UNIT_RenderingIface_TEST"
+ctest --output-on-failure -C Release -E "INTEGRATION|PERFORMANCE|REGRESSION|UNIT_RenderingIface_TEST|check_"
 if errorlevel 1 exit 1
