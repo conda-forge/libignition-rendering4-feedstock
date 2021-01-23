@@ -14,4 +14,4 @@ cmake .. \
 
 cmake --build . --config Release
 cmake --build . --config Release --target install
-ctest -C Release -E "INTEGRATION|PERFORMANCE|REGRESSION|UNIT_RenderingIface_TEST|check_UNIT_RenderingIface_TEST"
+ctest --output-on-failure -C Release -E "INTEGRATION|PERFORMANCE|REGRESSION|UNIT_RenderingIface_TEST|check_UNIT_RenderingIface_TEST"
