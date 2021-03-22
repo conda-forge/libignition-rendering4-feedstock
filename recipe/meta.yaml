@@ -41,7 +41,7 @@ requirements:
     - libignition-math6 >=6.6
     - libignition-common3
     - libignition-plugin1
-    - ogre
+    - ogre  {{ ogre }}
   run:
     - xorg-libx11                        # [unix]
     - xorg-libxext                       # [unix]
@@ -49,7 +49,7 @@ requirements:
     - libignition-math6 >=6.6
     - libignition-common3
     - libignition-plugin1
-    - ogre
+    - {{ pin_compatible('ogre', max_pin='x.x') }}
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
 test:

@@ -6,5 +6,3 @@ MACOSX_DEPLOYMENT_TARGET:      # [osx]
 ogre:
   - 1.10
   - 1.12
-pin_run_as_build:
-  ogre: x.x
