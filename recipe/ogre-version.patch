@@ -1,0 +1,17 @@
+diff --git a/ogre/src/CMakeLists.txt b/ogre/src/CMakeLists.txt
+index bb38fd8b..b214b02d 100644
+--- a/ogre/src/CMakeLists.txt
++++ b/ogre/src/CMakeLists.txt
+@@ -15,10 +15,10 @@ set(engine_name "ogre")
+ 
+ ign_add_component(${engine_name} SOURCES ${sources} GET_TARGET_NAME ogre_target)
+ 
+-if(OGRE_VERSION VERSION_LESS 1.10.3)
++if(OGRE_VERSION VERSION_LESS 1.11.0)
+   add_definitions(-DOGRE_VERSION_LT_1_10_3)
+ endif()
+-if(OGRE_VERSION VERSION_LESS 1.10.1)
++if(OGRE_VERSION VERSION_LESS 1.11.0)
+   add_definitions(-DOGRE_VERSION_LT_1_10_1)
+ endif()
+ if(OGRE_VERSION VERSION_LESS 1.12.0)
