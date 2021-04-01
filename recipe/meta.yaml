@@ -39,16 +39,14 @@ requirements:
     - xorg-libxext                       # [unix]
     - libglu                             # [linux]
     - libignition-math6 >=6.6
-    - libignition-common3
+    - libignition-common4
     - libignition-plugin1
+    - libignition-utils1
     - ogre  {{ ogre }}
   run:
     - xorg-libx11                        # [unix]
     - xorg-libxext                       # [unix]
     - libglu                             # [linux]
-    - libignition-math6 >=6.6
-    - libignition-common3
-    - libignition-plugin1
     - {{ pin_compatible('ogre', max_pin='x.x') }}
     - __osx >={{ MACOSX_DEPLOYMENT_TARGET|default("10.9") }}  # [osx and x86_64]
 
