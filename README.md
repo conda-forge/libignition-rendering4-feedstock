@@ -55,6 +55,20 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_arm64_ogre1.10</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11688&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-rendering4-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_ogre1.10" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_ogre1.12</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11688&branchName=master">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libignition-rendering4-feedstock?branchName=master&jobName=osx&configuration=osx_arm64_ogre1.12" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>win_64_ogre1.10</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=11688&branchName=master">
@@ -90,6 +104,7 @@ Installing `libignition-rendering4` from the `conda-forge` channel can be achiev
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `libignition-rendering4` can be installed with:
