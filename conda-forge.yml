@@ -1,4 +1,5 @@
-conda_forge_output_validation: true
 bot:
-  abi_migration_branches:
-    - "v4"
+  abi_migration_branches: [v4]
+build_platform: {osx_arm64: osx_64}
+conda_forge_output_validation: true
+test_on_native_only: true
