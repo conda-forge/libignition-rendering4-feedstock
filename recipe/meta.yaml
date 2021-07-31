@@ -54,7 +54,7 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/include/ignition/rendering{{ major_version  }}/ignition/rendering.hh  # [not win]
+    - test -f ${PREFIX}/include/ignition/rendering{{ major_version }}/ignition/rendering.hh  # [not win]
     - test -f ${PREFIX}/lib/libignition-rendering{{ major_version }}.so  # [linux]
     - test -f ${PREFIX}/lib/libignition-rendering{{ major_version }}.dylib  # [osx]
     - test -f ${PREFIX}/lib/cmake/ignition-rendering{{ major_version }}/ignition-rendering{{ major_version }}-config.cmake  # [not win]
