@@ -1,19 +1,21 @@
 {% set base_name = "libignition-rendering" %}
-{% set version = "5.1.0" %}
-{% set name = base_name  + version.split('.')[0] %}
+{% set version = "5_5.1.0" %}
+{% set version_package = version.split('_')[1] %}
+{% set major_version = version.split('_')[0] %}
+{% set name = base_name  + major_version %}
 
 package:
   name: {{ name }}
-  version: {{ version }}
+  version: {{ version_package }}
 
 source:
-  url: https://github.com/ignitionrobotics/ign-rendering/archive/ignition-rendering{{ version.split('.')[0] }}_{{ version }}.tar.gz
+  url: https://github.com/ignitionrobotics/ign-rendering/archive/ignition-rendering{{ version }}.tar.gz
   sha256: a26fe32f2dd849bb2ae492fc65b73e730f830f5bf9d763c9e62b6d6672ccf02f
   patches:
     - ogre-version.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
@@ -52,14 +54,14 @@ requirements:
 
 test:
   commands:
-    - test -f ${PREFIX}/include/ignition/rendering{{ version.split('.')[0] }}/ignition/rendering.hh  # [not win]
-    - test -f ${PREFIX}/lib/libignition-rendering{{ version.split('.')[0] }}.so  # [linux]
-    - test -f ${PREFIX}/lib/libignition-rendering{{ version.split('.')[0] }}.dylib  # [osx]
-    - test -f ${PREFIX}/lib/cmake/ignition-rendering{{ version.split('.')[0] }}/ignition-rendering{{ version.split('.')[0] }}-config.cmake  # [not win]
-    - if exist %PREFIX%\\Library\\include\\ignition\\rendering{{ version.split('.')[0] }}\\ignition\\rendering.hh (exit 0) else (exit 1)  # [win]
-    - if exist $PREFIX$\\Library\\lib\\ignition-rendering{{ version.split('.')[0] }}.lib (exit 0) else (exit 1)  # [win]
-    - if exist $PREFIX$\\Library\\bin\\ignition-rendering{{ version.split('.')[0] }}.dll (exit 0) else (exit 1)  # [win]
-    - if exist %PREFIX%\\Library\\lib\\cmake\\ignition-rendering{{ version.split('.')[0] }}\\ignition-rendering{{ version.split('.')[0] }}-config.cmake (exit 0) else (exit 1)  # [win]
+    - test -f ${PREFIX}/include/ignition/rendering{{ major_version }}/ignition/rendering.hh  # [not win]
+    - test -f ${PREFIX}/lib/libignition-rendering{{ major_version }}.so  # [linux]
+    - test -f ${PREFIX}/lib/libignition-rendering{{ major_version }}.dylib  # [osx]
+    - test -f ${PREFIX}/lib/cmake/ignition-rendering{{ major_version }}/ignition-rendering{{ major_version }}-config.cmake  # [not win]
+    - if exist %PREFIX%\\Library\\include\\ignition\\rendering{{ major_version }}\\ignition\\rendering.hh (exit 0) else (exit 1)  # [win]
+    - if exist $PREFIX$\\Library\\lib\\ignition-rendering{{ major_version }}.lib (exit 0) else (exit 1)  # [win]
+    - if exist $PREFIX$\\Library\\bin\\ignition-rendering{{ major_version }}.dll (exit 0) else (exit 1)  # [win]
+    - if exist %PREFIX%\\Library\\lib\\cmake\\ignition-rendering{{ major_version }}\\ignition-rendering{{ version.split('.')[0] }}-config.cmake (exit 0) else (exit 1)  # [win]
 
 about:
   home: https://github.com/ignitionrobotics/ign-rendering
