@@ -26,8 +26,8 @@ requirements:
     - pkg-config                         # [not win]
 
     # x11
-    - {{ cdt('mesa-libgl-devel') }}      # [unix]
-    - {{ cdt('mesa-dri-drivers') }}      # [unix]
+    - {{ cdt('mesa-libgl-devel') }}      # [unix and not (osx and arm64)]
+    - {{ cdt('mesa-dri-drivers') }}      # [unix and not (osx and arm64)]
     - {{ cdt('libselinux') }}            # [linux]
     - {{ cdt('libxdamage') }}            # [linux]
     - {{ cdt('libxxf86vm') }}            # [linux]
