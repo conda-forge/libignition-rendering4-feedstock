@@ -1,7 +1,7 @@
-macos_min_version:             # [osx]
-  - 10.14                      # [osx]
-MACOSX_DEPLOYMENT_TARGET:      # [osx]
-  - 10.14                      # [osx]
+macos_min_version:             # [osx and x86_64]
+  - 10.14                      # [osx and x86_64]
+MACOSX_DEPLOYMENT_TARGET:      # [osx and x86_64]
+  - 10.14                      # [osx and x86_64]
 
 ogre:
   - 1.10
