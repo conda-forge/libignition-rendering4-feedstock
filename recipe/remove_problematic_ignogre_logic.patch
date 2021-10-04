@@ -11,7 +11,7 @@ diff --git a/CMakeLists.txt b/CMakeLists.txt
 index 51328f1e..719f7721 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -64,30 +64,10 @@ endif()
+@@ -64,30 +64,11 @@ endif()
  # Find OGRE
  list(APPEND ign_ogre_components "RTShaderSystem" "Terrain" "Overlay")
  
@@ -39,6 +39,7 @@ index 51328f1e..719f7721 100644
 -      PRIVATE_FOR ogre)
 -  endif()
 -endif()
++ign_find_package(IgnOGRE VERSION 1.10 QUIET)
 +ign_find_package(IgnOGRE VERSION 1.10
 +  COMPONENTS ${ign_ogre_components}
 +  REQUIRED_BY ogre
