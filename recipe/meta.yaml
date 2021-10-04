@@ -14,6 +14,7 @@ source:
   patches:
     - ogre-version.patch
     - 452.patch
+    - remove_problematic_ignogre_logic.patch
 
 build:
   number: 0
