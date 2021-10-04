@@ -39,7 +39,7 @@ index 51328f1e..719f7721 100644
 -      PRIVATE_FOR ogre)
 -  endif()
 -endif()
-+ign_find_package(IgnOGRE VERSION 1.8.0
++ign_find_package(IgnOGRE VERSION 1.10
 +  COMPONENTS ${ign_ogre_components}
 +  REQUIRED_BY ogre
 +  PRIVATE_FOR ogre)
