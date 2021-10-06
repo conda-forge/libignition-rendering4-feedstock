@@ -40,7 +40,7 @@ index 51328f1e..719f7721 100644
 -  endif()
 -endif()
 +ign_find_package(IgnOGRE VERSION 1.10
-+  COMPONENTS ${ign_ogre_components}
++  # COMPONENTS ${ign_ogre_components}
 +  REQUIRED_BY ogre
 +  PRIVATE_FOR ogre)
 +  message(STATUS "OGRE_RESOURCE_PATH: ${OGRE_RESOURCE_PATH}")
