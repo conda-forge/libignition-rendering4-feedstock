@@ -13,7 +13,9 @@ cmake ${CMAKE_ARGS} .. \
       -DCMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=True \
       -DFREEIMAGE_RUNS:BOOL=ON \
       -DFREEIMAGE_RUNS__TRYRUN_OUTPUT:STRING="" \
-      -DFREEIMAGE_COMPILES:BOOL=ON
+      -DFREEIMAGE_COMPILES:BOOL=ON \
+      -DSKIP_ogre2:BOOL=ON \
+      -DSKIP_optix:BOOL=ON
 
 cmake --build . --config Release
 cmake --build . --config Release --target install
