@@ -3,12 +3,8 @@
 mkdir build
 cd build
 
-export VERBOSE=1
 export CFLAGS="${CFLAGS} -DGLX_GLXEXT_LEGACY"
 export CXXFLAGS="${CXXFLAGS} -DGLX_GLXEXT_LEGACY"
-# Workaround for issues discussed in https://github.com/conda-forge/libignition-rendering4-feedstock/pull/19#issuecomment-935578431
-export CXXFLAGS="${CXXFLAGS} -I${CONDA_PREFIX}/include/OGRE/Paging"
-
 
 cmake ${CMAKE_ARGS} .. \
       -DCMAKE_BUILD_TYPE=Release \
