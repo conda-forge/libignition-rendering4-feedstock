@@ -13,7 +13,6 @@ source:
   sha256: e9c7740916f2c39df5c1a3e1118bd5f0c137b01e6c513c87f6c8f27713665fd8
   patches:
     - ogre-version.patch
-    - 452.patch
     - remove_problematic_ignogre_logic.patch
 
 build:
