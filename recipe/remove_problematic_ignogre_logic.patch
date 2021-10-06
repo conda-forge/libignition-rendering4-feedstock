@@ -42,7 +42,7 @@ index 51328f1e..719f7721 100644
 +ign_find_package(IgnOGRE VERSION 1.10
 +  REQUIRED_BY ogre PRIVATE_FOR ogre)
 +if(NOT WIN32) 
-+  include_directories($ENV{CONDA_PREFIX}/include/OGRE/Paging)
++  target_include_directories(IgnOGRE::IgnOGRE INTERFACE $ENV{CONDA_PREFIX}/include/OGRE/Paging)
 +endif()
 
  if (OGRE_FOUND)
