@@ -40,10 +40,10 @@ index 51328f1e..719f7721 100644
 -  endif()
 -endif()
 +ign_find_package(IgnOGRE VERSION 1.10
-+  # COMPONENTS ${ign_ogre_components}
-+  REQUIRED_BY ogre
-+  PRIVATE_FOR ogre)
-+  message(STATUS "OGRE_RESOURCE_PATH: ${OGRE_RESOURCE_PATH}")
++  REQUIRED_BY ogre PRIVATE_FOR ogre)
++if(NOT WIN32) 
++  include_directories($ENV{CONDA_PREFIX}/include/OGRE/Paging)
++endif()
 
  if (OGRE_FOUND)
    # find boost - mainly needed on macOS and also by the terrain component
