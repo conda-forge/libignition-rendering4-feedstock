@@ -13,11 +13,17 @@ cmake ${CMAKE_ARGS} .. \
       -DCMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=True \
       -DFREEIMAGE_RUNS:BOOL=ON \
       -DFREEIMAGE_RUNS__TRYRUN_OUTPUT:STRING="" \
-      -DFREEIMAGE_COMPILES:BOOL=ON
+      -DFREEIMAGE_COMPILES:BOOL=ON \
+      -DSKIP_ogre2:BOOL=ON \
+      -DSKIP_optix:BOOL=ON
 
 cmake --build . --config Release
 cmake --build . --config Release --target install
+
 # UNIT_Heightmap_TEST disabled for https://github.com/conda-forge/libignition-rendering4-feedstock/issues/10
-if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
-ctest --output-on-failure -C Release -E "INTEGRATION|PERFORMANCE|REGRESSION|UNIT_RenderingIface_TEST|check_UNIT_RenderingIface_TEST|UNIT_Heightmap_TEST"
-fi
+# if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
+# Do not run tests as they require to open a display and this is not supported on CI at the moment
+# See https://github.com/conda-forge/libignition-rendering4-feedstock/pull/19#issuecomment-937678806
+# export RENDER_ENGINE_VALUES=ogre
+# ctest --extra-verbose --output-on-failure -C Release -E "INTEGRATION|PERFORMANCE|REGRESSION|UNIT_RenderingIface_TEST|check_UNIT_RenderingIface_TEST|UNIT_Heightmap_TEST"
+# fi

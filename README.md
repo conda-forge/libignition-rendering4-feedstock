@@ -1,4 +1,4 @@
-About libignition-rendering5
+About libignition-rendering6
 ============================
 
 Home: https://github.com/ignitionrobotics/ign-rendering
@@ -95,28 +95,28 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-libignition--rendering5-green.svg)](https://anaconda.org/conda-forge/libignition-rendering5) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libignition-rendering5.svg)](https://anaconda.org/conda-forge/libignition-rendering5) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libignition-rendering5.svg)](https://anaconda.org/conda-forge/libignition-rendering5) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libignition-rendering5.svg)](https://anaconda.org/conda-forge/libignition-rendering5) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libignition--rendering6-green.svg)](https://anaconda.org/conda-forge/libignition-rendering6) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libignition-rendering6.svg)](https://anaconda.org/conda-forge/libignition-rendering6) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libignition-rendering6.svg)](https://anaconda.org/conda-forge/libignition-rendering6) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libignition-rendering6.svg)](https://anaconda.org/conda-forge/libignition-rendering6) |
 
-Installing libignition-rendering5
+Installing libignition-rendering6
 =================================
 
-Installing `libignition-rendering5` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `libignition-rendering6` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libignition-rendering5` can be installed with:
+Once the `conda-forge` channel has been enabled, `libignition-rendering6` can be installed with:
 
 ```
-conda install libignition-rendering5
+conda install libignition-rendering6
 ```
 
-It is possible to list all of the versions of `libignition-rendering5` available on your platform with:
+It is possible to list all of the versions of `libignition-rendering6` available on your platform with:
 
 ```
-conda search libignition-rendering5 --channel conda-forge
+conda search libignition-rendering6 --channel conda-forge
 ```
 
 
@@ -158,17 +158,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating libignition-rendering5-feedstock
+Updating libignition-rendering6-feedstock
 =========================================
 
-If you would like to improve the libignition-rendering5 recipe or build a new
+If you would like to improve the libignition-rendering6 recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/libignition-rendering5-feedstock are
+Note that all branches in the conda-forge/libignition-rendering6-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
