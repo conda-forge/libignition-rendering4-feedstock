@@ -1,0 +1,2 @@
+export OGRE_RESOURCE_PATH=$CONDA_PREFIX/lib/OGRE
+export IGN_RENDERING_RESOURCE_PATH=$CONDA_PREFIX/share/ignition/ignition-rendering6
