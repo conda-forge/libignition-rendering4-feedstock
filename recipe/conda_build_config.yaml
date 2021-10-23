@@ -7,3 +7,5 @@ MACOSX_DEPLOYMENT_TARGET:      # [osx and x86_64]
 OGRE_VERSION:
   - "1.10"
   - "1.12"
+
+build_with_mambabuild: false
