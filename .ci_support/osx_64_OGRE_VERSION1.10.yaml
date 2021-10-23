@@ -1,5 +1,7 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.14'
+OGRE_VERSION:
+- '1.10'
 c_compiler:
 - clang
 c_compiler_version:
@@ -16,8 +18,6 @@ macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
 - '10.14'
-ogre:
-- '1.12'
 target_platform:
 - osx-64
 zip_keys:
