@@ -22,6 +22,11 @@ build:
   run_exports:
     - {{ pin_subpackage(name, max_pin='x') }}
 
+  {% if OGRE_VERSION == "1.12" %}
+  track_features:
+    - gazebo_classic_with_ogre_1_12
+  {% endif %}
+
 requirements:
   build:
     - {{ compiler('cxx') }}
@@ -47,7 +52,11 @@ requirements:
     - libignition-common4
     - libignition-plugin1
     - libignition-utils1
-    - ogre  {{ ogre }}
+    {% if OGRE_VERSION == "1.10" %}
+    - ogre 1.10.*
+    {% else %}
+    - ogre 1.12.*
+    {% endif %}
   run:
     - xorg-libx11                        # [unix]
     - xorg-libxext                       # [unix]
