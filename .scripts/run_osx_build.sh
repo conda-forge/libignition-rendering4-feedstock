@@ -59,6 +59,8 @@ if [[ "${HOST_PLATFORM}" != "${BUILD_PLATFORM}" ]]; then
     EXTRA_CB_OPTIONS="${EXTRA_CB_OPTIONS:-} --no-test"
 fi
 
+export CONDA_OVERRIDE_OSX=11.0
+
 conda $BUILD_CMD ./recipe -m ./.ci_support/${CONFIG}.yaml --suppress-variables --clobber-file ./.ci_support/clobber_${CONFIG}.yaml ${EXTRA_CB_OPTIONS:-}
 ( startgroup "Validating outputs" ) 2> /dev/null
 
