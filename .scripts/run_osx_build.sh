@@ -18,7 +18,8 @@ bash $MINIFORGE_FILE -b -p ${MINIFORGE_HOME}
 
 ( startgroup "Configuring conda" ) 2> /dev/null
 
-BUILD_CMD=build
+GET_BOA=boa
+BUILD_CMD=mambabuild
 
 source ${MINIFORGE_HOME}/etc/profile.d/conda.sh
 conda activate base
