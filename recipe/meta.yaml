@@ -12,9 +12,7 @@ source:
   url: https://github.com/ignitionrobotics/ign-rendering/archive/ignition-rendering{{ version }}.tar.gz
   sha256: ca39bd98777c87ad4010a70f915e46b78baaa74e64a43f0b6468819f1aa20f1e
   patches:
-    - 452.patch
     - remove_problematic_ignogre_logic.patch
-    - 454.patch
 
 build:
   number: 0
