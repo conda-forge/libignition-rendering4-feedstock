@@ -14,7 +14,6 @@ cmake ${CMAKE_ARGS} .. \
       -DFREEIMAGE_RUNS:BOOL=ON \
       -DFREEIMAGE_RUNS__TRYRUN_OUTPUT:STRING="" \
       -DFREEIMAGE_COMPILES:BOOL=ON \
-      -DSKIP_ogre2:BOOL=ON \
       -DSKIP_optix:BOOL=ON
 
 cmake --build . --config Release
@@ -24,7 +23,6 @@ cmake --build . --config Release --target install
 # if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
 # Do not run tests as they require to open a display and this is not supported on CI at the moment
 # See https://github.com/conda-forge/libignition-rendering4-feedstock/pull/19#issuecomment-937678806
-# export RENDER_ENGINE_VALUES=ogre
 # ctest --extra-verbose --output-on-failure -C Release -E "INTEGRATION|PERFORMANCE|REGRESSION|UNIT_RenderingIface_TEST|check_UNIT_RenderingIface_TEST|UNIT_Heightmap_TEST"
 # fi
 
