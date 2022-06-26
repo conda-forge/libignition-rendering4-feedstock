@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# Workaround for PRIu64 not being defined
+# See https://github.com/conda-forge/staged-recipes/pull/18792#issuecomment-1114606992
+export CXXFLAGS="-D__STDC_FORMAT_MACROS $CXXFLAGS"
+
 mkdir build
 cd build
 
