@@ -6,7 +6,6 @@ cmake ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DCMAKE_BUILD_TYPE=Release ^
     -DCMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP=True ^
-    -DSKIP_ogre2:BOOL=ON ^
     -DSKIP_optix:BOOL=ON ^
     %SRC_DIR%
 if errorlevel 1 exit 1
